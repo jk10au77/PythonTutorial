@@ -8,8 +8,3 @@ print("Hello, World!")  # prints the message in the double quotes.
 name = 'Jaya Kumar'
 hello = 'Hello,'   
 print(hello, name)
-
-
-
-
-
