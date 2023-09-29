@@ -10,8 +10,15 @@
         c.  use conditional execution and the continue statement to "eat" the following vowels A, E, I, O, 
             U from the inputted word;
         d.  print the uneaten letters to the screen, each one of them on a separate line.
-"""
 
+    Change History:
+        Version No:    Description
+        a. 1.01        code to capture the uneaten word     
+
+
+
+"""
+word_without_vowels = ""                # Version 1.01
 word = input("Enter a word: ")
 user_word = word.upper()
 for letter in user_word:
@@ -19,5 +26,12 @@ for letter in user_word:
        continue
     else:
         print(letter)
+        word_without_vowels += letter   # Version 1.01
+print("The end of printing the vowels. ")
+print("Printing the word with out vowels: ", word_without_vowels)   # Version 1.01
+print("***************************************************************")
+print_without_vowels = "Printing the word without vowels: "         # Version 1.01
+print(print_without_vowels, word_without_vowels)                    # Version 1.01
+
 
 
