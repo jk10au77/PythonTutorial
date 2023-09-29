@@ -31,14 +31,14 @@ for count in range(2, 8, 3):
 # End of intial commit
 
 # Start of version 1.01
-'''
+
 row_number = int(input("Enter the number of rows to be printed with *: "))
 for i in range(1, row_number+1):
     for j in range(i, i+1):
         print_row = '*' * j 
         print(print_row, end = ' ')
     print('\n')
-'''
+
 
 # printing pyramid with numbers
 
