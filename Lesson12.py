@@ -8,6 +8,7 @@ import random       # random generator module
 user_count = int(input("Enter the total number of numbers in a list: "))
 my_list = []
 swapped = True
+# list generation using the random generator
 for i in range(user_count):
     number = random.randint(100, 1000)
     my_list.append(number)
