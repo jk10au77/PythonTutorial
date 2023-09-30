@@ -10,8 +10,8 @@
     ----------------
     S.No    Version     Description
     -------------------------------------
-    1.          1.0     List definitions, length, and indexing
-
+    1.          1.01    List definitions, length, and indexing
+    2.          1.02    Difference between functions and methods.
     
 """
 
@@ -33,3 +33,18 @@ print(len(boys))            # len() function returns the number of elements in b
 # another way of accessing individual elements of a list
 for i in range(len(numbers)):
     print(numbers[i])  
+
+
+#   Version 1.02 - Difference between functions and methods
+"""
+-----------------------------------------------------------------------------------------------------
+    Functions Vs Methods:                            
+-----------------------------------------------------------------------------------------------------
+1. A function doesn't belong to any data whereas Methods is a specific kind of data.
+2. A function is owned by the whole code whereas a method is owned by data it works for.
+3. Function invocation looks like function_name(with arguments or without arguments)
+   method invocation looks like data.method(with arguments or without arguments)
+4. Method will behave like a function, but can do even more - it can change the internal state of 
+   the data from which it has been invoked. 
+                           
+"""
