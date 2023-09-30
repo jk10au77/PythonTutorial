@@ -15,6 +15,7 @@
     3.          1.03    List operations:
                         a. Adding elements to a list using append(), insert() methods
                         b. finding the number of elements in a list - len() method
+    4.          1.10    Exercise on list
 
     
 """
@@ -91,3 +92,40 @@ print('*************************************')
 for i in range(len(boys)):
     print(boys[i])              # implements indexing for accessing element in a list
 print('*************************************')
+
+"""
+    Version 1.10 - Exercise on list
+    ----------------------------------------
+    Scenario: The Beatles were one of the most popular music group of the 1960s, and 
+    the best-selling band in history. Some people consider them to be the most influential 
+    act of the rock era. Indeed, they were included in Time magazine's compilation of the 
+    20th Century's 100 most influential people.
+
+    The band underwent many line-up changes, culminating in 1962 with the line-up of John 
+    Lennon, Paul McCartney, George Harrison, and Richard Starkey (better known as Ringo Starr).
+
+    Write a program that reflects these changes and lets you practice with the concept of lists. 
+    Your task is to:
+        step_01:    create an empty list named beatles;
+        step_02:    use the append() method to add the following members of the band to the list: 
+                    John Lennon, Paul McCartney, and George Harrison
+        step03:     use the for loop and the append() method to prompt the user to add the following 
+                    members of the band to the list: Stu Sutcliffe, and Pete Best;
+        step04:     print the beatles one element at a time
+"""
+
+beatles = []                        # step01
+beatles.append('John Lennon')       # step02
+beatles.append('Paul McCartney')    # step02
+beatles.append('George Harrison')   # step02
+
+for i in range(2):
+    name = input("Enter the 'Stusutcliffe' and 'PeteBest' words seperately in two iterations:")
+    beatles.append(name)
+print('*************************************')
+for guy in beatles:
+    print(guy)
+
+
+
+
