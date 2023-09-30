@@ -16,7 +16,7 @@
                         a. Adding elements to a list using append(), insert() methods
                         b. finding the number of elements in a list - len() method
     4.          1.10    Exercise on list
-
+    5.          1.11    Key takeaways
     
 """
 
@@ -126,6 +126,15 @@ print('*************************************')
 for guy in beatles:
     print(guy)
 
-
-
-
+"""
+    Version 1.11 - Key takeaways
+    ----------------------------------
+    1.  The list is a type of data in Python used to store multiple objects. It is an ordered and 
+        mutable collection of comma-separated items between square brackets.
+    2.  Lists can be indexed and updated.
+    3.  Lists can be nested like my_list = [1, 'a', ["list", 64, [0, 1], False]]
+    4.  List elements and lists can be deleted
+    5.  Lists can be iterated through using the for loop
+    6.  The len() function may be used to check the list's length
+    7.  
+"""
