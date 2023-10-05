@@ -18,6 +18,7 @@
     e. arguments exist outside the function.    
 
 """
+import random
 
 def message(number):
     print("Enter a number: ", number)
@@ -62,3 +63,29 @@ def boring_function():
 print("This lesson is interesting!")
 value = boring_function()
 print("This lesson is boring...", value)
+
+"""
+    Write a function which takes one argument (a year) and returns
+        a. True if the year is a leap year
+        b. Flase if the year is not a leap year
+    
+        Note:   A year is said to be leap year if it is divided by 4 and If the year is a century year, 
+                then it is a leap year if it divided by 4 and 100
+"""
+
+def isYearLeap(year):
+    if (year % 4 == 0) or (year % 4 != 0 and year % 100 == 0):
+        return True
+    else:
+        return False
+print("Begin of leap year test: ")
+test_data = []
+for count in range(10):
+    test_data.append(random.randint(1900, 2050))
+result =[]
+for year in test_data:
+    result.append(isYearLeap(year))
+
+print(test_data)
+print(result)
+print("End of leap year test.")
