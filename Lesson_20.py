@@ -95,3 +95,14 @@ except ZeroDivisionError:
     print("Division by zero is not allowed in our universe.")
 except:
     print("Something strange has happened here...Sorry.")
+
+"""
+    Some useful exceptions:
+    -----------------------
+    a. ZeroDivisionError
+    b. ValueError
+    c. TypeError
+    d. AttributeError
+    e. SyntaxError
+
+"""
