@@ -114,6 +114,8 @@ for name in dir(platform):
     Now run the main.py file. You should see nothing. This means that Python has successfully imported the 
     contents of the module.py file
     Now take a look into the folder in which both files exist.
+    A new subfolder has appeared - can you see it? Its name is __pycache__. Take a look inside
+            
 
 """
 
