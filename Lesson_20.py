@@ -106,3 +106,61 @@ except:
     e. SyntaxError
 
 """
+"""
+what is the output of the following code?
+
+dictionary = {'one': 'two', 'three': 'one', 'two': 'three'}
+v = dictionary['one']
+for k in range(len(dictionary)):
+    v = dictionary[v]
+print(v)
+
+what is the output of the following code?
+def fun(x):
+    if x % 2 == 0:
+        return 1
+    else:
+        return 
+    
+print(fun(fun(2)) + 1)
+
+what is the output of the following code?
+
+def any():
+    print(var + 1, end='')
+
+var = 1
+any()
+print(var)
+
+# what is the output of the following code?
+my_list = ['mary', 'had', 'a', 'little', 'lamb']
+
+def my_list(my_list):
+    del my_list[3]
+    my_list[3] = 'ram'
+
+print(my_list(my_list))
+
+what is the output of the following code?
+
+def func_1(a):
+    return a ** a
+
+def func_2(a):
+    return func_1(a) * func_1(a)
+
+print(func_2(2))
+
+what is the output of the following code?
+"""
+dictionary = {}
+my_list = ['a', 'b', 'c', 'd']
+
+for i in range(len(my_list) - 1):
+    dictionary[my_list[i]] = (my_list[i], )
+
+for i in sorted(dictionary.keys()):
+    k = dictionary[i]
+    print(k)
+

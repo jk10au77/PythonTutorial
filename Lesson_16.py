@@ -66,11 +66,14 @@ print("This lesson is boring...", value)
 
 """
     Write a function which takes one argument (a year) and returns
-        a. True if the year is a leap year
+        a. True if the year is a leap year  - 
         b. Flase if the year is not a leap year
     
-        Note:   A year is said to be leap year if it is divided by 4 and If the year is a century year, 
-                then it is a leap year if it divided by 4 and 100
+        Note:   A year is said to be leap year 
+            a.  if (it is divided by 4) or (if the year is divisible by 4 and not divisible by 100) , 
+            b.  all other years are ordinary years
+        
+                
 """
 
 def isYearLeap(year):
