@@ -105,8 +105,15 @@ for name in dir(platform):
        in the same way as you've previously grouped functions - is there a more general container than a module?
     d. yes, there is - it's a package; in the world of modules, a package plays a similar role to a 
        folder/directory in the world of files.
-       
-
+"""
+"""
+    Your first module - step1: create an empty file called module.py
+    your first module - step2: create anothe empty file called main.py. Now import module.py in this file.
+                                save the file.
+    Note: Both files must be located in the same file.
+    Now run the main.py file. You should see nothing. This means that Python has successfully imported the 
+    contents of the module.py file
+    Now take a look into the folder in which both files exist.
 
 """
 
