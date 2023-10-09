@@ -147,7 +147,29 @@
             d.  it's not only the root folder that can contain __init.py__ file - you can put it inside any of its 
                 subfolders (subpackages) too. It may be useful if some of the subpackages require individual treatment 
                 and special kinds of initialization.
-            e.  
+    
+    """
+"""
+    modules and packages: key takeaways:
+    --------------------------------------
+    a.  While a module is designed to couple together some related entities (functions, variables, constants, etc.), 
+        a package is a container which enables the coupling of several related modules under one common name. Such a 
+        container can be distributed as-is (as a batch of files deployed in a directory sub-tree) or it can be packed 
+        inside a zip file.
+    b.  During the very first import of the actual module, Python translates its source code into the semi-compiled 
+        format stored inside the pyc files, and deploys these files into the __pycache__ directory located in the 
+        module's home directory.
+    c.  If you want to instruct your module's user that a particular entity should be treated as private (i.e. not 
+        to be explicitly used outside the module) you can mark its name with either the _ or __ prefix. Don't forget 
+        that this is only a recommendation, not an order.
+    d.  The names shabang, shebang, hasbang, poundbang, and hashpling describe the digraph written as #!, used to 
+        instruct Unix-like OSs how the Python source file should be launched. This convention has no effect under 
+        MS Windows.
+    e. If you want convince Python that it should take into account a non-standard package's directory, its name 
+        needs to be inserted/appended into/to the import directory list stored in the path variable contained in 
+        the sys module.
+    f. A Python file named __init__.py is implicitly run when a package containing it is subject to import, and is 
+        used to initialize a package and/or its sub-packages (if any). The file may be empty, but must not be absent.
 
 
 
