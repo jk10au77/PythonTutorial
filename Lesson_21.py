@@ -107,6 +107,19 @@ for name in dir(platform):
        folder/directory in the world of files.
 """
 """
+    =======================================================================================================
+                                        Package:    
+    =======================================================================================================
+    Description: 
+    ------------
+    We usually organize our files in different folders and subfolders based on some criteria, so that they 
+    can be managed easily and efficiently. We usually organize our files in different folders and subfolders 
+    based on some criteria, so that they can be managed easily and efficiently. 
+    
+    Definition:
+    -----------
+    Package in Python is a folder that contains various modules as files.
+
     Your first module - step1: create an empty file called module.py
     your first module - step2: create anothe empty file called main.py. Now import module.py in this file.
                                 save the file.

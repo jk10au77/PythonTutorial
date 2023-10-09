@@ -120,6 +120,7 @@
             (if any of the remaining folders contains a module of that name, it will be ignored).
             The variable is named path, and it's accessible through the module named sys
 
+<<<<<<< HEAD
         """
 """
     Your first Package:
@@ -171,3 +172,6 @@
     f. A Python file named __init__.py is implicitly run when a package containing it is subject to import, and is 
         used to initialize a package and/or its sub-packages (if any). The file may be empty, but must not be absent.
 """
+=======
+        """
+>>>>>>> package
