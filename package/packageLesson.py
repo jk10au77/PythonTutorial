@@ -132,7 +132,7 @@
     Now the question is 
         a.  How do you transform  the above tree structure into a real Python package? (in other words, 
             how do you convince Python that such a tree is not just a bunch of junk files, but a set of modules)?
-        b.  where do you put the subtree to make it accessible to Python?
+        b.  where do you put the subtree to make it accessible to Python? Answer is anywhere
 
         Note: packages, like modules, may require initialization.
         ----
