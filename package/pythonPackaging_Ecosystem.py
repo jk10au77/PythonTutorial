@@ -12,7 +12,11 @@
     a.  Firs verify whether pip was installed?
         pip --version in the cmd 
 
+"""
 
+"""
+    Key takeaways:
+    -------------
 
-
+  
 """
