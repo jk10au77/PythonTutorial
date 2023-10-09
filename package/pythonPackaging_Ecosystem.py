@@ -7,6 +7,11 @@
             named the Packaging Working Group
         b.  a tool to access the central repository - The tool is pip (pip installs packages)
 
+    How to install tool 'pip'?
+    ---------------------------
+    a.  Firs verify whether pip was installed?
+        pip --version in the cmd 
+
 
 
 
