@@ -68,7 +68,5 @@ raise Exception("an error occured")
 
 """
     Also go through the pdf in the repo for advanced tutorial in exceptions.
-
-
 """
 
