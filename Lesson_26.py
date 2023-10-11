@@ -50,8 +50,16 @@
                     b.  Tracked Vehicles
                     c.  Hovercrafts
                 ii. Water Vehicles
+                    a.  Boat
+                    b.  Yatcht
+                    c.  submarine
+                    d.  cruise
                 iii.Air vehicles
-                iv. Space Vehicles    
+                    a.  Aeroplane
+                    b.  Helicopter
+                iv. Space Vehicles
+                    a.  Rocket
+                    b.  Space Shuttle    
 
         b.  animals
             i.  mammals
