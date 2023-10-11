@@ -109,3 +109,82 @@
         create it yourself, and Python allows you to do this.
 """
 
+"""
+    Procedural implementation of Stack.
+"""
+
+stack = []              # 
+def push(value):
+    print("Stack before pushing ", value, "element.")
+    stack.insert(0, value)
+    
+
+def pop():
+    value = stack[0]
+    print("Stack before popping ", value, "element.")
+    del stack[0]
+    print(stack)
+    return value
+
+print("populating stack list with element.")
+for num in range(10):
+    push(num)
+    
+print("popping stack list with element.")
+for i in range(len(stack)):
+    print(pop())
+
+"""
+    Stack implementation using Object orientation approach.
+"""
+
+class Stack:                    # defining the stack class
+    def __init__(self):         # defining the constructor function
+        self.__stack_list = []
+    
+    def push(self, value):
+        self.__stack_list.insert(0, value)      # pushing the element at zeroth place into the stack list
+
+    def pop(self):
+        value = self.__stack_list[0]
+        del self.__stack_list[0]                # popping the zeroth element from the stack list
+        return value
+
+    def browse(self):
+        # browsing the element of Stack object
+        print("Printing the elements of stack object's list")
+        print(self.__stack_list)
+
+    def length(self):
+        return len(self.__stack_list)
+    
+    
+    
+       
+
+stack_object = Stack()
+print("Start of the pushing operation.")
+for element in range(10):
+    stack_object.push(element)
+    print(stack_object.browse())
+print("End of the pushing operation.")
+
+"""
+stack_object.browse()
+
+print(stack_object.length())
+
+print(stack_object.pop())
+print(stack_object.length())
+
+"""
+
+little_stack = Stack()
+another_stack = Stack()
+funny_stack = Stack()
+little_stack.push(1)
+another_stack.push(little_stack.pop() + 1)
+funny_stack.push(another_stack.pop())
+little_stack.browse()
+another_stack.browse()
+funny_stack.browse()
