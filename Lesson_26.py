@@ -93,4 +93,10 @@
             a.  noun        - you probably define the object's name;
             b.  adjective   - you probably define the object's property;
             c.  verb        - you probably define the object's activity.
+
+    Note:
+    ----
+    a.  The class you define has nothing to do with the object: the existence of a class does not mean that any of the 
+        compatible objects will automatically be created. The class itself isn't able to create an object - you have to 
+        create it yourself, and Python allows you to do this.
 """
