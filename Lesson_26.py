@@ -141,12 +141,15 @@ for i in range(len(stack)):
 class Stack:                    # defining the stack class
     def __init__(self):         # defining the constructor function
         self.__stack_list = []
+        self.__sum = 0
     
     def push(self, value):
         self.__stack_list.insert(0, value)      # pushing the element at zeroth place into the stack list
+        self.__sum += value
 
     def pop(self):
         value = self.__stack_list[0]
+        self.__sum -= value
         del self.__stack_list[0]                # popping the zeroth element from the stack list
         return value
 
@@ -158,17 +161,16 @@ class Stack:                    # defining the stack class
     def length(self):
         return len(self.__stack_list)
     
+    def add(self):
+        return self.__sum
     
-    
-       
-
 stack_object = Stack()
 print("Start of the pushing operation.")
 for element in range(10):
     stack_object.push(element)
     print(stack_object.browse())
 print("End of the pushing operation.")
-
+print("The sum of elements in stack object is ", stack_object.add())
 """
 stack_object.browse()
 
@@ -188,3 +190,4 @@ funny_stack.push(another_stack.pop())
 little_stack.browse()
 another_stack.browse()
 funny_stack.browse()
+
