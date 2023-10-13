@@ -42,4 +42,80 @@ class Classy:
 
 obj_1 = Classy("object")
 print(obj_1.var)
-       
+
+"""
+    Everything about the property name mangling applies to method names also. A method whose name starts with __ is 
+    partially hidden.
+"""       
+class Classy:
+    def visible(self):
+        print("visible.")
+    
+    def __hidden(self):
+        print("hidden.")
+
+obj = Classy()
+obj.visible()
+
+try:
+    obj.__hidden()
+except:
+    print("Invisible")
+
+obj._Classy__hidden()
+
+"""
+    The inner life cycle of classes and objects:
+    --------------------------------------------
+    Each Python class and each Python object is pre-equipped with a set of useful attributes which can be used to 
+    examine its capabilities.
+    We already know one of these - it's __dict__ property
+"""
+class Classy:
+    varia = 1
+    def __init__(self):
+        self.var = 2
+    
+    def method(self):
+        pass
+
+    def __hidden(self):
+        pass
+print("The start of inner life cycle of objects.")
+obj = Classy()
+print("The end of inner life cycle of class object.")
+for i in range(len(obj.__dict__)):
+    print(obj.__dict__, '\n')
+print("The end of inner life cycle of class objects.")
+print("The start of inner life cycle of classes.")
+for i in range(len(Classy.__dict__)):
+    print(Classy.__dict__, '\n')
+print("The end of inner life cycle of classes.")
+
+"""
+    The __name__ property is another built-in property and is a string.
+    ------------------------------------------------------------------
+    a. It exists only inside classes. and is absent from the object.
+    b. If you want to find class of a particular object, you can use type() 
+
+"""
+
+class Classy:
+    pass
+
+print(Classy.__name__)
+obj = Classy()
+print(type(obj))
+print(type(obj).__name__)
+
+"""
+    a.  The __module__ is also a string.
+    b.  The __module__ contains the module name which contains the definition of the class.
+"""
+class Classy:
+    pass
+
+
+print(Classy.__module__)
+obj = Classy()
+print(obj.__module__)
