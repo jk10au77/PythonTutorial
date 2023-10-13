@@ -119,3 +119,10 @@ class Classy:
 print(Classy.__module__)
 obj = Classy()
 print(obj.__module__)
+
+"""
+    The __bases__ property:
+    ------------------------
+        a. It is a tuple.
+
+"""
