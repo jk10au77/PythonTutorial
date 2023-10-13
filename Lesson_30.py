@@ -1,0 +1,23 @@
+"""
+    private class variable and mangling the private class variable.
+
+    Mangling a class variable's name has the same effects as those you're already familiar with.
+"""
+
+class ExampleClass:
+    __counter = 0
+
+    def __init__(self, val = 1):
+        self.__first = val
+        ExampleClass.__counter += 1
+
+example_object_1 = ExampleClass()
+print(example_object_1.__dict__, example_object_1._ExampleClass__counter)
+example_object_2 = ExampleClass(2)
+print(example_object_2.__dict__, example_object_2._ExampleClass__counter)
+example_object_3 = ExampleClass(4)
+print(example_object_3.__dict__, example_object_3._ExampleClass__counter)
+
+print(example_object_1.__dict__, example_object_1._ExampleClass__counter)
+print(example_object_2.__dict__, example_object_2._ExampleClass__counter)
+print(example_object_3.__dict__, example_object_3._ExampleClass__counter)
