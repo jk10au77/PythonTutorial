@@ -21,3 +21,4 @@ print(example_object_3.__dict__, example_object_3._ExampleClass__counter)
 print(example_object_1.__dict__, example_object_1._ExampleClass__counter)
 print(example_object_2.__dict__, example_object_2._ExampleClass__counter)
 print(example_object_3.__dict__, example_object_3._ExampleClass__counter)
+
