@@ -62,4 +62,3 @@ example_object_3.third = 5
 print("The instance variables of example_object_1: ", example_object_1.__dict__)
 print("The instance variables of example_object_2: ", example_object_2.__dict__)
 print("The instance variables of example_object_3: ", example_object_3.__dict__)
-
