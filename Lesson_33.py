@@ -123,7 +123,10 @@ print(obj.__module__)
 """
     The __bases__ property:
     ------------------------
-        a. It is a tuple. It contains classes which are direct classes (not class names)
+        a.  It is a tuple. It contains classes which are direct classes (not class names)
+        b.  Only classes have this attribute. objects don't have this attribute.
+        c.  a class without explicit superclasses point to Object class. The Object is a predefined Python
+            Python class) as its direct ancestor.
 
 """
 
@@ -140,10 +143,10 @@ def printBases(cls):
     print('(', end='')
     for cl in cls.__bases__:
         print(cl.__name__, end=' ')
-        print(')')
+    print(')')
 print('----------------------------------------------------------------------------')
 print("Illustration of __bases__")
-printBases(SuperOne)
+printBases(SuperOne)            # a class without explicit superclasses point to Object class
 printBases(SuperTwo)
 printBases(Sub)
 print('----------------------------------------------------------------------------')
