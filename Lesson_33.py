@@ -123,6 +123,27 @@ print(obj.__module__)
 """
     The __bases__ property:
     ------------------------
-        a. It is a tuple.
+        a. It is a tuple. It contains classes which are direct classes (not class names)
 
 """
+
+class SuperOne:
+    pass
+
+class SuperTwo:
+    pass
+
+class Sub(SuperOne, SuperTwo):
+    pass
+
+def printBases(cls):
+    print('(', end='')
+    for cl in cls.__bases__:
+        print(cl.__name__, end=' ')
+        print(')')
+print('----------------------------------------------------------------------------')
+print("Illustration of __bases__")
+printBases(SuperOne)
+printBases(SuperTwo)
+printBases(Sub)
+print('----------------------------------------------------------------------------')
