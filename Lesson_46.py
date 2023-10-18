@@ -58,3 +58,14 @@ fcub = make_closure(3)
 
 for i in range(5):
     print(i, fsqr(i), fcub(i))
+
+# What is the output of the below code snippet
+
+def replace_spaces(replacement='*'):
+    def new_replacement(text):
+        return text.replace(' ', replacement)
+    return new_replacement
+
+stars = replace_spaces()
+print(stars("And Now for Something Completely Different"))
+
