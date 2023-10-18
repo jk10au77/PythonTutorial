@@ -44,5 +44,25 @@
     b.  When a file is opened, an object of an adequate class is created
     c.  When a file is closed, object previous created at the time of opening operation is killed.
     d.  Between these two events, you can use the object to specify what operations should be performed on a particular stream.
-    
-"""
+
+    Based on the contents of stream, all streams are divided into two type
+        a. Text streams       The text streams ones are structured in lines;
+        b. Binary streams
+
+        Text streams  
+        ------------
+        a   The text streams ones are structured in lines;
+        b.  This file is written (or read) mostly character by character, or line by line.
+
+        Binary streams:
+        ---------------
+        a.  The binary streams don't contain text but a sequence of bytes of any value. This sequence can be, for example, an executable 
+            program, an image, an audio or a video clip, a database file, etc
+        b.  Because these files don't contain lines, the reads and writes relate to portions of data of any size. Hence the data is 
+            read/written byte by byte, or block by block, where the size of the block usually ranges from one to an arbitrarily chosen value.
+        Note:
+        -----
+        a.  In Unix/Linux systems, the line ends are marked by a single character named LF (ASCII code 10) designated in Python programs as \n.
+        b.  In windows systems, the end of line is marked by a pair of characters, CR and LF (ASCII codes 13 and 10) which can be encoded as 
+            \r\n.
+    """
