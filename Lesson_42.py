@@ -57,4 +57,26 @@ object = Class(8)
 for i in object:
     print(i)
 
+# Exercise_1:   What is the expected output of the following code?
+class Vowels:
+    def __init__(self):
+        self.vow = 'aeiouy'         ## Yes, we know that y is not always considered a vowel.
+        self.pos = 0
+
+    def __iter__(self):
+        return self
+    
+    def __next__(self):
+        if self.pos == len(self.vow):
+            raise StopIteration
+        self.pos += 1
+        return self.vow[self.pos - 1]
+
+vowels = Vowels()
+for v in vowels:
+    print(v, end=' ')
+
+    
+
+
 
