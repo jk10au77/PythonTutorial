@@ -65,4 +65,88 @@
         a.  In Unix/Linux systems, the line ends are marked by a single character named LF (ASCII code 10) designated in Python programs as \n.
         b.  In windows systems, the end of line is marked by a pair of characters, CR and LF (ASCII codes 13 and 10) which can be encoded as 
             \r\n.
-    """
+
+        Portable program: 
+            a.  The trait of the program allowing execution in different environments is called portability. 
+            b.  A program endowed with such a trait is called a portable program.
+        Note:
+        ----
+            To make program portable, i.e. abiltiy to use the program in different OS, it was done at the level of classes. In the following manner
+                a.  when the stream is open and it's advised that the data in the associated file will be processed as text (or there is no 
+                such advisory at all), it is switched into text mode;
+                b.  during reading/writing of lines from/to the associated file, nothing special occurs in the Unix environment, 
+                    but when the same operations are performed in the Windows environment, a process called a translation of newline characters 
+                    occurs: 
+                        a.  when you read a line from the file, every pair of \r\n characters is replaced with a single \n character, and 
+                            vice versa; 
+                        b.  during write operations, every \n character is replaced with a pair of \r\n characters;
+        
+        Opening the streams:
+        --------------------
+        a.  open() function performs the stream opening operation as shown below
+
+                stream = open(file_name, mode='r/w/u', encoding = None)
+
+                a.  if the opening is successful, the function returns a stream object; otherwise, an exception is raised 
+                    (e.g., FileNotFoundError if the file you're going to read doesn't exist);
+                b.  the first parameter of the function (file) specifies the name of the file to be associated with the stream;
+                c.  the second parameter (mode) specifies the open mode used for the stream
+                d.  the third parameter (encoding) specifies the encoding type (e.g., UTF-8 when working with text files)
+                e.  the opening must be the very first operation performed on the stream.
+
+            Opening the streams: modes
+            --------------------------
+                a.  read mode or 'r':
+                    ----------------
+                    1.  the stream will be opened in read mode.
+                    2.  the file associated with the stream must exist and has to be readable, otherwise the open() function raises an exception.
+                
+                b.  w  open mode: write:
+                    --------------------
+                    1.  the stream will be opened in write mode.
+                    2.  the file associated with the stream doesn't need to exist; if it doesn't exist it will be created; if it exists, it will
+                        be truncated to the length of zero (erased); if the creation isn't possible (e.g., due to system permissions) the open()
+                        function raises an exception.
+                
+                c.  a open mode: append:
+                    ---------------------
+                    1.  the stream will be opened in append mode;
+                    2.  the file associated with the stream doesn't need to exist; if it doesn't exist, it will be created; 
+                        if it exists the virtual recording head will be set at the end of the file (the previous content of the file remains 
+                        untouched.)
+                d.  r+ open mode: read and update
+                    -----------------------------
+                    1.  The stream will be opened in read and update mode;
+                    2.  The file associated with the stream must exist and has to be writeable, 
+                        otherwise the open() function raises an exception; 
+                    3.  Both read and write operations are allowed for the stream.
+                
+                e.  w+ open mode: write and update
+                    -------------------------------
+                    1.  The stream will be opened in read and update mode;
+                    2.  The file associated with the stream must exist and has to be writeable, otherwise the open() function raises an 
+                        exception;
+                    3.  Both read and write operations are allowed for the stream.
+
+            Selecting text and binary modes:
+            --------------------------------
+                a.  If there is a letter b at the end of the mode string it means that the stream is to be opened in the binary mode.
+                b.  If the mode string ends with a letter t the stream is opened in the text mode.Text mode is the default one
+            
+            Note:   Finally, the successful opening of the file will set the current file position (the virtual reading/writing head) before 
+                    the first byte of the file if the mode is not a and after the last byte of file if the mode is set to a.
+            
+                    -------------------------------------
+                    Text mode	Binary mode	Description
+                    -------------------------------------
+
+                1.      rt	        rb	    read
+                2.      wt	        wb	    write
+                3.      at	        ab	    append
+                4.      r+t	        r+b	    read and update
+                5.      w+t	        w+b	    write and update
+
+            Note:   You can also open a file for its exclusive creation. You can do this using the x open mode. If the file already exists, 
+                    the open() function will raise an exception.
+
+"""
