@@ -149,4 +149,64 @@
             Note:   You can also open a file for its exclusive creation. You can do this using the x open mode. If the file already exists, 
                     the open() function will raise an exception.
 
+    Pre-Opened Streams:
+    ------------------
+    a.  We know that any stream operation must be preceded by the open() function. 
+    b.  There are three well-defined exceptions to this rule. They are sys.stdin, sys.stdout, and sys.stderr 
+    c.  The opening and closing operations are not needed for sys.stdin, sys.stdin, and sys.stdout streams.
+
+    The sys.stdin stream:
+    ---------------------
+        a.  stdin as standard input
+        b.  the stdin stream is normally associated with the keyboard, pre-open for reading and regarded as the primary data source for the 
+            running programs;
+        c.  input() function reads data from stdin by default
+
+    The sys.stdout stream:
+    ----------------------
+        a.  stdout as standard output
+        b.  the stdout stream is normally associated with the screen, pre-open for writing, regarded as the primary target for outputting 
+            data by the running program.
+        c.  the print() function outputs the data to the stdout stream.
+    
+    The sys.stderr stream:
+    ----------------------
+        a.  stderr as standard error
+        b.  the stderr stream is normally associated with the screen, pre-open for writing, regarded as the primary place where the running 
+            program should send information on the errors encountered during its work;
+        c.  
+
+    Closing streams:
+    ----------------
+    a.  It is the last operation performed on the stream
+    b.  The close() function closes the stream
+    c.  the function expects exactly no arguments; the stream doesn't need to be opened
+    d.  the function returns nothing but raises IOError exception in case of error;
+    e.  most developers believe that the close() function always succeeds and thus there is no need to check if it's done its task properly.
+
+    Diagnosing stream problems:
+    ---------------------------
+    a.  The IOError object is provided with a property errno (the error number) and we can access it as follow:
+
+try:
+    # some stream operations
+except IOError as exc:
+    print(exc.errno)
+
+    b.  The value of errno attribute can be compared with one of the predefined symbolic constants.
+
+    Note:
+    -----
+    a.  All symbolic constants are defined in the errno module. Few of them are given below
+    b.  errno.EACCES -  permission denied. The error occurs when you try, for example, to open a file with the read only attribute for writing.
+    c.  errno.EBADF -   Bad file number. The error occurs when you try, for example, to operate with an unopened stream
+    d.  errno.EEXIST -  File exists. The error occurs when you try, for example, to rename a file with its previous name.
+    e.  errno.EFBIG  -  File too large. The error occurs when you try to create a file that is larger than the maximum allowed by the operating 
+                        system.
+    f.  errno.EISDIR -  The error occurs when you try to treat a directory name as the name of an ordinary file.
+    g.  errno.EMFILE -  Too many files. The error occurs when you try to simultaneously open more streams than acceptable for your operating 
+                        system.
+    h.  errno.ENOENT -  No such file or directory. The error occurs when you try to access a non-existent file/directory.
+    i.  errno.ENOSPC -  No space left on device. The error occurs when there is no free space on the media.
+
 """
