@@ -22,7 +22,7 @@ This is the question. Modules are the answer.
 """
 """
 Module: is a file containing Python definitions and statements, which can later imported and used when necessay.
-        Few examples include Math module, Pandas module, NumPy module etc
+        Few examples include datetime module, Math module, Pandas module, NumPy module etc
 
 The handling of modules consists of two different issues:
     a. users - who uses the existing modules
@@ -30,12 +30,12 @@ The handling of modules consists of two different issues:
 
 a.  Modules are identified by its name.
 b.  All these modules, along with the built-in functions, form the Python standard library
-c.  Each module consists of entities. These entities can be functions, variables, constants, classes, and objects.
+c.  Each module consists of entities. These entities can be constants, variables, functions, classes, and objects.
 d.  To make a module usable, you have to import it. using the below syntax
     import  module_name
 
-Namespace:  is a space (understood in a non-physical context) in which some names exists and the names donot conflict
-            with eachother.
+Namespace:  is a space (understood in a non-physical context) in which some names exists and 
+the names donot conflict with eachother.
 """
 
 import math         # import math module
@@ -67,8 +67,11 @@ print(math.sin(math.pi/2))  # uses pi defined in math module
 
 
 """
-for count in range(len(dir(math))):
-    print(dir(math))
+for name in dir(math):
+    print(name, end='\n')
+print('--------------------------------------')
+print('End of printing math module entities.')
+print('--------------------------------------')
 
 """
     Few modules:
