@@ -98,4 +98,3 @@ for entity in dir(datetime):
 
 """
 
-from datetime import date
