@@ -97,4 +97,17 @@ for entity in dir(datetime):
     Resource: https://docs.python.org/3/library/datetime.html
 
 """
+from datetime import date
+
+today_date = date(2020, 10, 24)
+print("Today is : ", today_date)
+print("Year is : ", today_date.year)
+print("Month is : ", today_date.month)
+print("Day is : ", today_date.day)
+print("Today is : ", today_date.today())
+
+print('--------------------------------------------')
+for i in dir(date):
+    print(i)
+
 
