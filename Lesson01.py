@@ -13,8 +13,8 @@ def printcalendar(year):
     for yr in year:
         for month in ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September',
                   'October', 'November', 'December']:
-                print(f'\t {month} {yr}')
-                print("Mo  ","Tu  ","We  ","Th  ","Fr  ","Sa  ","Su")
+                print(f'\t {month} {yr} \t\t\t {month} {yr}')
+                print(f'Mo  Tu  We  Th  Fr  Sa  Su  \t Mo  Tu  We  Th  Fr  Sa  Su')
                 print('\n\n')
-            
+             
 printcalendar([2020, 2021, 2022, 2023])
