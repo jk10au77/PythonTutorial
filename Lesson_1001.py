@@ -34,34 +34,3 @@ def fun(n):
     
 for x in fun(2):
     print(x, end = '')
-
-
-from datetime import datetime, date
-
-date_1 = date(1992, 1, 16)
-date_2 = date(1991, 2, 5)
-print(date_2 - date_1)
-dat = datetime(2019, 11, 27, 11, 27, 22)
-
-
-
-import calendar
-
-c = calendar.Calendar()
-
-for weekday in c.iterweekdays():
-    print(weekday, end="")
-
-print(calendar.weekheader(2))
-
-
-def I():
-    s = 'abcdef'
-    for c in s[::2]:
-        yield c
-    
-for x in I():
-    print(x, end='')
-
-
-print(__name__)
