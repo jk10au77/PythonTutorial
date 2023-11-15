@@ -66,3 +66,8 @@ def simple_hell():
     print("Hello from a simple function")
 
 simple_hello()
+
+"""
+    Decorators should be universal. i.e. Decorators must support any function, regardless of the number and type of arguments passed. 
+    In such a situation, we can use the *args and **kwargs concepts. We can also employ a closure technique to persist arguments.
+"""
