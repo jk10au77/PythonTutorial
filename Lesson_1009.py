@@ -71,3 +71,40 @@ simple_hello()
     Decorators should be universal. i.e. Decorators must support any function, regardless of the number and type of arguments passed. 
     In such a situation, we can use the *args and **kwargs concepts. We can also employ a closure technique to persist arguments.
 """
+
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+
+    return wrapper
+
+def say_whee():
+    print("Whee!")
+
+say_whee = my_decorator(say_whee)
+print(say_whee())
+
+from datetime import datetime
+
+def not_during_the_night(func):
+    def wrapper():
+        if 7 <= datetime.now() < 22:
+            func()
+        else:
+            pass
+        return wrapper
+
+def say_hello():
+    print("hello")
+
+say_hello = not_during_the_night(say_hello)
+
+from decorator import do_twice
+
+@do_twice
+def say_whee():
+    print("Whee!")
+
+say_whee()
