@@ -1,5 +1,5 @@
 def do_twice(func):
-    def wrapper():
+    def wrapper_do_twice():
         func()
         func()
     return wrapper
