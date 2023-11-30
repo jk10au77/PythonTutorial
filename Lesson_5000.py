@@ -64,14 +64,14 @@ depth:
     b. if the data structure to be printed is too deep, the next contained levels is replaced by ....
     c. By default, there is no constraint on the depth of the objects to be formatted.
 
-width:
+width:  limits the line length
 -----
     a.  default value is 80
     b.  specifies the number of characters to be printed per line in the output.
 
 compact:    default is compact = False
 ---------
-    a.  impacts the way that long sequences (lists, tuples, sets, etc) are formatted
+    a.  squeezes the sequences
     b.  if compact = False, then each item of a sequence will be formatted in a seperate line. 
     c.  if compact = True, then as many items as will fit within the width will be formatted on each line.
 
@@ -80,17 +80,17 @@ indent:
     a.  indent = 1 is the default
     b.  specifies the amount of indentation added for each nesting level.
 
-stream:
+stream: direct the output to the specified destination
 -------
     a.  (default is sys.stdout) is a file-like object. 
     b.  The output will be written by calling write() method. 
 
-sort_dicts:
+sort_dicts: 
 -----------
     a.  sort_dicts = True is the default specifies to sort dictionaries with key sorted.
-    b.  sort_dicts = False ==> displays diction in insertion order.
+    b.  sort_dicts = False ==> displays diction in insertion order. i.e. prevents the dictionary sorting
 
-underscore_numbers
+underscore_numbers: prettifing your numbers with underscores.
 -------------------
     a.  underscore_numbers = False is the default. ntegers will not be formatted with the _ character for a thousands separator,
     b.  underscore_numbers = True, integers will be formatted with the _ character for a thousands separator,
@@ -98,7 +98,7 @@ underscore_numbers
         
 """
 # Example
-
+"""
 import pprint
 import json
 from urllib.request import urlopen
@@ -107,3 +107,36 @@ with urlopen('https://pypi.org/pypi/sampleproject/json') as resp:
     project_info = json.load(resp)['info']
 
 pprint.pprint(project_info)
+
+"""
+"""
+    Creating a custom PrettyPrinter object:
+    ---------------------------------------
+
+        a.  it is possible to create an instance of PrettyPrinter that has defaults you’ve defined.
+        b.  Once you have this new instance of your custom PrettyPrinter object, you can use it by calling the .pprint() method on the 
+            PrettyPrinter instance
+"""
+
+# creates a custom PrettyPrint object
+import pprint
+custom_printer = pprint.PrettyPrinter(indent=4,
+                               width=100,
+                               depth=2,
+                               sort_dicts=True,
+                               underscore_numbers=True,
+                               compact=False)   
+
+
+from urllib import request
+import json
+
+response = request.urlopen("https://jsonplaceholder.typicode.com/users")
+json_response = response.read()
+
+
+users = json.loads(json_response)
+custom_printer.pprint(users[1])
+
+number_list = [123456789, 10000000000000000000000000000]
+custom_printer.pprint(number_list)
